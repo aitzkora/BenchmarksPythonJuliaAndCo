@@ -5,7 +5,7 @@
 #  Not sure it works everywhere. If it does not, improve it, or enter each
 #  directory and look at README.md to know what to do. 
 #
-for i in C++-Fonctor  C++-lambda  C++-Pointer; do
+for i in C++-Fonctor  C++-lambda  C++-Pointer Fortran; do
     echo "--- "
     echo "Test: "$i
     echo "--- "

@@ -30,6 +30,8 @@ Thierry Dumont   tdumont@math.univ-lyon1.fr
 
 -  **C++-Fonctor**:  computation in C++, using object functions.
 
+- **Fortran**: computation in Fortran 90 using pure functions
+
 - **Py**:  Pure Python  computation.
 
 - **Pythran**:  Python + Pythran  computation.
@@ -41,7 +43,7 @@ Thierry Dumont   tdumont@math.univ-lyon1.fr
 
 ### Running the benchmarks
 
-cd successively in C++-xxx, Py, Pythran, Numba, Ju; then look at the documentation. 
+cd successively in C++-xxx, Fortran, Py, Pythran, Numba, Ju; then look at the documentation. 
 
 Once you have run the benchmark in **all** directories, go to Results/
 and look at the documentation to know how to exploit the results.

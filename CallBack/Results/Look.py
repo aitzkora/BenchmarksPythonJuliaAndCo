@@ -5,19 +5,20 @@
 import socket
 from pathlib import Path
 
-# directories to explore ---------   
-files=[
+# directories to explore ---------
+files = [
      "C++-lambda",  "C++-Pointer",
-    "Py",
-    "Pythran",
-    "Numba",
-    "Ju",
-    
+     "Fortran",
+     "Py",
+     "Pythran",
+     "Numba",
+     "Ju",
+
 ]
 #  ----  Directory of the reference program (C++?), from which computing time
 # will be taken as  units
 # --------------------------------------------------------------------------
-cpp="C++-Fonctor"
+cpp = "C++-Fonctor"
 
 #---------------------------------------------------------------------------
 # build a dict  n-> computing time for "cpp" directory
@@ -26,7 +27,7 @@ with open("../"+cpp+"/RunningOn"+socket.gethostname(), 'r') as file:
     for line in file:
         l=line.replace("\n","").split()
         C[l[0]]=float(l[1])
-        
+
 #---- now loop on files [] and compare, if possible.
 Call={}
 for n in files:
@@ -41,8 +42,8 @@ for n in files:
                     if len(l)!=0:
                         s=l[1].replace("Trial(","").replace(" μs","")
                         if l[0] in C.keys():
-                            Cloc[l[0]]=float(s)*1.e-6/C[l[0]]         
-                    
+                            Cloc[l[0]]=float(s)*1.e-6/C[l[0]]
+
         else:
             with open(filename,"r") as file:
                 for line in file:
